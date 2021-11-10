@@ -336,8 +336,9 @@ const AvatarImage = createReactClass({
         } else {
           var style = initialsStyle
           if (!this.state.value) { 
-            style.background = this.whiteColor()
-            style.color = this.blackColor()
+            // style.background = this.whiteColor()
+            // style.color = this.blackColor()
+            style.opacity = 0.0
           }
           return (
             /* jshint ignore:start */
