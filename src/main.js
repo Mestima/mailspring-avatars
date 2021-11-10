@@ -1,8 +1,8 @@
 import { ComponentRegistry } from 'mailspring-exports';
 import AvatarFactory from './avatar-factory';
 
-const SmallAvatar = AvatarFactory(32,'SmallAvatar');
-const LargeAvatar = AvatarFactory(42,'LargeAvatar');
+const SmallAvatar = AvatarFactory(20,'SmallAvatar');
+const LargeAvatar = AvatarFactory(30,'LargeAvatar');
 
 // Activate is called when the package is loaded. If your package previously
 // saved state using `serialize` it is provided.

@@ -4,11 +4,20 @@
   }
 }
 
+.thread-list {
+  .thread-injected-icons {
+    .thread-avatar {
+      width: 25px !important;
+    }
+  }
+}
+
 .thread-list-narrow {
 
   .list-tabular-item.focused {
     .thread-avatar {
-      transform: translate3d(0, 0px, 0px) scale(.8)
+      transform: translate3d(0, 0px, 0px) scale(.8);
+      transition: all .15s cubic-bezier(0.35, 0.91, 0.41, 0.99);
     }
   }
 
@@ -16,16 +25,16 @@
     .thread-avatar{
       margin: 1px;
       position: fixed !important;
-      top: 8px;
+      top: 17px;
       left: 7px;
       transform: translate3d(0, 0px, 0px) scale(.8);
       transition: all .15s cubic-bezier(0.35, 0.91, 0.41, 0.99);
     }
   }
 
-  .list-tabular-item.focused {
+  .thread-injected-icons {
     .thread-avatar {
-      transition: all .15s cubic-bezier(0.35, 0.91, 0.41, 0.99);
+      width: 25px !important;
     }
   }
 
@@ -83,8 +92,8 @@
 /** Eye icon **/
 .open-tracking-icon {
   position: absolute;
-  top: 18px;
-  left: 22px;
+  top: 8px;
+  left: 20px;
 }
 
 .list-column-Item .open-tracking-icon {
