@@ -120,6 +120,16 @@ const AvatarImage = createReactClass({
         return colors[ index ];
     },
 
+    whiteColor: function()
+    {
+        return '#ffffff';
+    },
+
+    blackColor: function()
+    {
+        return '#000000';
+    },
+
     /**
      * Convert a name into initials
      * @param {string} name
@@ -287,6 +297,9 @@ const AvatarImage = createReactClass({
 
         if( !this.props.name && this.props.value )
             this.trySetState({ value: this.props.value });
+      
+        if( !this.props.name && !this.props.value )
+            this.trySetState({ value: '' });
 
         if( url === null && this.props.src) {
             this.setSrc( this.parse(this.props.src, {size: this.props.size}) );
@@ -321,11 +334,16 @@ const AvatarImage = createReactClass({
                 /* jshint ignore:end */
             );
         } else {
-            return (
-                /* jshint ignore:start */
-                <div style={ initialsStyle }>{ this.state.value }</div>
-                /* jshint ignore:end */
-            );
+          var style = initialsStyle
+          if (!this.state.value) { 
+            style.background = this.whiteColor()
+            style.color = this.blackColor()
+          }
+          return (
+            /* jshint ignore:start */
+            <div style={ style }>{ this.state.value }</div>
+            /* jshint ignore:end */
+          );
         }
     },
     render: function() {
